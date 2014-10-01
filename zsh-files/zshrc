@@ -1,4 +1,4 @@
-th to your oh-my-zsh configuration.
+# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -16,6 +16,14 @@ alias r='./run'
 alias mc='make clean'
 alias vi='vim'
 alias g='gvim'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
+alias v='valgrind ./run'
+alias docs='cd ~/Documents'
+alias down='cd ~/Downloads'
+alias opt='cd /opt'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
