@@ -19,7 +19,7 @@ wget -qO installer $TI_MSPGCC_URL
 echo "Installing TI MSPGCC"
 chmod +x installer
 ./installer --mode unattended --prefix $TI_MSPGCC_DIR
-
+rm installer
 # Copy headers and ldscripts to the correct location to prevent the need to explicitly include them
 cp $TI_MSPGCC_DIR/{include/*.h,msp430-elf/include}
 cp $TI_MSPGCC_DIR/{include/*.ld,msp430-elf/lib}
