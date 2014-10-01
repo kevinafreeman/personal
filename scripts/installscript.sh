@@ -39,4 +39,4 @@ mv master.zip ~/Desktop
 unzip ~/Desktop/master.zip -d ~/Desktop/
 cp ~/Desktop/personal-master/zsh-files/zshrc .zshrc
 cp ~/Desktop/personal-master/zsh-files/kevin.zsh-theme ~/.oh-my-zsh/themes/
-rm -rf ~/Desktop/master.zip ~/Desktop/master/
+rm -rf ~/Desktop/master.zip ~/Desktop/personal-master/
