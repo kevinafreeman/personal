@@ -25,6 +25,8 @@ alias docs='cd ~/Documents'
 alias down='cd ~/Downloads'
 alias opt='cd /opt'
 alias cd..='cd ..'
+alias cp='cp -r'
+alias repos='cd ~/Repos'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -60,7 +62,7 @@ plugins=(git svn ruby gitfast mercurial debian sublime sudo)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/ti-mspgcc/bin
 
 #source /opt/tinyos-main/tinyos.env
 #export MOTECOM=serial@/dev/ttyUSB0:tmote 
