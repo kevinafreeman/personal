@@ -22,6 +22,7 @@ echo "Installing TI MSPGCC"
 chmod +x installer
 ./installer --mode unattended --prefix $TI_MSPGCC_DIR
 rm installer
+
 # Copy headers and ldscripts to the correct location to prevent the need to explicitly include them
 cp $TI_MSPGCC_DIR/{include/*.h,msp430-elf/include}
 cp $TI_MSPGCC_DIR/{include/*.ld,msp430-elf/lib}
@@ -30,3 +31,11 @@ $TI_MSPGCC_DIR/install_scripts/msp430uif_install.sh
 apt-get install -y mspdebug linux-image-extra-virtual
 ln -s $TI_MSPGCC_DIR/bin/libmsp430.so /usr/lib/
 /usr/share/doc/libdvdread4/install-css.sh
+
+#install dev files
+git clone anonymous@anonymous@buffet.cs.clemson.edu:kfreem2/devEnvFiles ~/Repos/devEnvFiles
+dpkg -i ~/Repos/devEnvFiles/M0-files/jlink_4.92_i386.deb 
+unzip ~/Repos/devEnvFiles/M0-files/nrf51822_sdk.zip -d /opt/nrf51822
+#install qm modeling
+chmod +x ~/Repos/devEnvFiles/qm/qm_3.2.0-linux64
+~/Repos/devEnvFiles/qm/./qm_3.2.0-linux64 --mode silent

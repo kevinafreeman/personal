@@ -35,14 +35,14 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 #Install Chrome beta
 wget https://dl.google.com/linux/direct/google-chrome-beta_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
-<<<<<<< HEAD
-
 
 #install dev files
 git clone anonymous@anonymous@buffet.cs.clemson.edu:kfreem2/devEnvFiles ~/Repos/devEnvFiles
 dpkg -i ~/Repos/devEnvFiles/M0-files/jlink_4.92_i386.deb 
 unzip ~/Repos/devEnvFiles/M0-files/nrf51822_sdk.zip -d /opt/nrf51822
-=======
+#install qm modeling
+~/Repos/devEnvFiles/qm/./qm_3.2.0-linux64 --mode silent
+
 #Install Oh-my-zsh
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 wget https://github.com/kevinafreeman/personal/archive/master.zip
@@ -55,4 +55,3 @@ sudo dpkg -i ~/Desktop/personal-master/libness64bit/libness64bit/libness*.deb
 cp ~/Desktop/personal-master/zsh-files/zshrc .zshrc
 cp ~/Desktop/personal-master/zsh-files/kevin.zsh-theme ~/.oh-my-zsh/themes/
 rm -rf ~/Desktop/master.zip ~/Desktop/personal-master/
->>>>>>> 79c3b2c1a2c37d4aaa85703d66f2608bfc47de1c
