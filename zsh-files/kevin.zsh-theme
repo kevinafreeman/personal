@@ -1,4 +1,4 @@
-VN_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}svn[%{$fg[yellow]%}"
+ZSH_THEME_SVN_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}svn[%{$fg[yellow]%}"
 ZSH_THEME_SVN_PROMPT_SUFFIX="%{$fg[green]%}]%{$reset_color%}"
 ZSH_THEME_SVN_PROMPT_DIRTY="%{$fg[red]%}*%{$reset_color%}"
 ZSH_THEME_SVN_PROMPT_CLEAN=""

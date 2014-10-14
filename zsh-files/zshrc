@@ -27,6 +27,8 @@ alias opt='cd /opt'
 alias cd..='cd ..'
 alias cp='cp -r'
 alias repos='cd ~/Repos'
+alias gs='git status'
+alias gp='git push'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
