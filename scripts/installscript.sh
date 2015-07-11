@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
-if cat /etc/apt/sources.list | grep -i webupd8
+if ls /etc/apt/sources.list.d | grep webupd8
 	then
 	echo "Already have sources"
 else
 	echo "Need to add souces----adding now"
-	sudo add-apt-repository ppa:nilarimogard/webupd8
-	sudo add-apt-repository ppa:webupd8team/java
-	sudo add-apt-repository ppa:webupd8team/sublime-text-3
-	sudo add-apt-repository ppa:mc3man/trusty-media
-	sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+	sudo add-apt-repository -y ppa:nilarimogard/webupd8
+	sudo add-apt-repository -y ppa:webupd8team/java
+	sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+	sudo add-apt-repository -y ppa:mc3man/trusty-media
+	sudo add-apt-repository -y ppa:danielrichter2007/grub-customizer
 fi
 
 sudo chown $(logname):$(logname) /opt
 sudo apt-get update
 
 sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
 sudo apt-get install -y build-essential
 sudo apt-get install -y linux-headers-$(uname -r)
 sudo apt-get install -y git rake mercurial zsh ssh subversion
@@ -56,8 +57,8 @@ printf '%s\n    %s\n' 'Host buffet.cs.clemson.edu' 'StrictHostKeyChecking no' >>
 git clone anonymous@buffet.cs.clemson.edu:jhester/mspdebug-fresh
 cd mspdebug-fresh
 make
-mv /usr/bin/mspdebug /usr/bin/mspdebug_old
-cp mspdebug /usr/bin/mspdebug
+sudo mv /usr/bin/mspdebug /usr/bin/mspdebug_old
+sudo cp mspdebug /usr/bin/mspdebug
 cd ..
 rm -r mspdebug-fresh
 
